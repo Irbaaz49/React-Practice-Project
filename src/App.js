@@ -7,6 +7,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import Show from "./Components/Show";
 import Input from "@mui/material/Input";
+import Typography from "@mui/material/Typography";
 import Actor from "./Components/Actor";
 const ariaLabel = { "aria-label": "description" };
 
@@ -30,9 +31,10 @@ function App() {
             <FormControl>
               <Typography xs={{
                 color : "white"
-              }} variant="h4" component="h4">
+              }} variant="h4" component="h4" >
                 Search your favourite shows
               </Typography>
+              <br/>
               <RadioGroup
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
