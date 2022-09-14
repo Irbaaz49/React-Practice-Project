@@ -38,15 +38,12 @@ function Show({ actor }) {
   useEffect(() => {
     async function fetchFinalData() {
       let result = filterID() >= 1 ? filterID() : "No result found";
-      console.log(result);
-      console.log(filterID());
 
       const response = await fetch(
         `https://api.tvmaze.com/people/${result}/castcredits?embed=show`
       );
       const final_data = await response.json();
 
-      console.log(final_data);
       if (actor.length > 0) setFinalres(final_data);
     }
     fetchFinalData();
@@ -111,10 +108,12 @@ function Show({ actor }) {
             </Card>
           );
         })
-      ) : (
+      ) : actor === '' ? (
+       ''
+      ):(
         <p className="result" style={{ color: "red" }}>
-          No result found!
-        </p>
+        No result found!
+      </p>
       )}
     </>
   );
