@@ -70,22 +70,20 @@ function Actor({ actor }) {
                   <Typography variant="body2" color="text.secondary">
                     {item.show.summary}
 
-                    {/* {item.show.summary.length() > 0 ? item.show.summary.replace(/<[^>]+>/g, '').substring(0, 118) + '...' : "" } */}
-                    {/* for some reason replace and subtstr is not working , am not able to find the reason */}
-                    {/* {item.show.summary.replace(/<[^>]+>/g, '').substring(0, 118) + '...'} */}
+                
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
           );
         })
-      ) : actor === "" ? (
-        <p className="result" style={{ color: "red" }}>
-          No result found!
-        </p>
-      ) : (
-        ""
-      )}
+      ) : actor === '' ? (
+        ''
+       ):(
+         <p className="result" style={{ color: "red" }}>
+         No result found!
+       </p>
+       )}
     </>
   );
 }
