@@ -5,7 +5,6 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import Show from "./Components/Show";
 import Input from "@mui/material/Input";
 import Actor from "./Components/Actor";
@@ -29,9 +28,11 @@ function App() {
         <Container>
           <div>
             <FormControl>
-              <FormLabel id="demo-row-radio-buttons-group-label">
+              <Typography xs={{
+                color : "white"
+              }} variant="h4" component="h4">
                 Search your favourite shows
-              </FormLabel>
+              </Typography>
               <RadioGroup
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
