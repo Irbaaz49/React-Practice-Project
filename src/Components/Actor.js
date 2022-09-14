@@ -68,7 +68,7 @@ function Actor({ actor }) {
                     {item.show.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {item.show.summary}
+             {item.show.summary === null ? "" : item.show.summary.replace(/<[^>]+>/g, '').substring(0, 118) + '...' }
 
                 
                   </Typography>
