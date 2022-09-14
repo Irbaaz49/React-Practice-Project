@@ -78,12 +78,12 @@ function Actor({ actor }) {
           );
         })
       ) : actor === '' ? (
-        ''
-       ):(
-         <p className="result" style={{ color: "red" }}>
-         No result found!
-       </p>
-       )}
+       ''
+      ):(
+        <p className="result" style={{ color: "red" }}>
+        No result found!
+      </p>
+      )}
     </>
   );
 }
